@@ -3,7 +3,7 @@
 Summary:	WWW::Search::Google - Search Google via SOAP
 Name:		perl-%{real_name}
 Version:	0.22
-Release: %mkrel 2
+Release: %mkrel 3
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{real_name}
@@ -34,6 +34,8 @@ This module uses Net::Google to do all the dirty work.
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
+
+%check
 make test
 
 %install
