@@ -3,7 +3,7 @@
 Summary:	WWW::Search::Google - Search Google via SOAP
 Name:		perl-%{real_name}
 Version:	0.22
-Release: %mkrel 3
+Release: %mkrel 4
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{real_name}
