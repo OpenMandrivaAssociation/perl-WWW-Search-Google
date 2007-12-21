@@ -12,6 +12,7 @@ BuildRequires:	perl-devel
 BuildRequires:	perl-Net-Google >= 0.52
 BuildRequires:	perl(WWW::Search)
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This class is a Google specialization of WWW::Search. It handles
