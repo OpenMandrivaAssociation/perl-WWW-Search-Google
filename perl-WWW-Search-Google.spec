@@ -1,17 +1,20 @@
-%define module WWW-Search-Google
+%define upstream_name    WWW-Search-Google
+%define upstream_version 0.23
+
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Search Google via SOAP
-Name:		perl-%{module}
-Version:	0.23
-Release:    %mkrel 2
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:		http://search.cpan.org/CPAN/modules/by-module/WWW/%{module}-%{version}.tar.bz2
+URL:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/modules/by-module/WWW/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl-Net-Google >= 0.52
 BuildRequires:	perl(WWW::Search)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This class is a Google specialization of WWW::Search. It handles
@@ -28,7 +31,7 @@ This module reports errors via croak().
 This module uses Net::Google to do all the dirty work.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -49,4 +52,3 @@ rm -rf %{buildroot}
 %doc CHANGES README
 %{perl_vendorlib}/WWW
 %{_mandir}/*/*
-
