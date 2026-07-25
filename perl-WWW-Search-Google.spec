@@ -2,14 +2,14 @@
 %define upstream_version 0.23
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	5
 
 Summary:	Search Google via SOAP
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/modules/by-module/WWW/%{upstream_name}-%{upstream_version}.tar.bz2
+URL:		https://metacpan.org/dist/WWW-Search-Google
+Source0:	https://cpan.metacpan.org/authors/id/L/LB/LBROCARD/WWW-Search-Google-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
