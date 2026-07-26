@@ -1,15 +1,13 @@
 %define upstream_name    WWW-Search-Google
-%define upstream_version 0.23
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	0.23
+Release:	6
 
 Summary:	Search Google via SOAP
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		https://metacpan.org/dist/WWW-Search-Google
-Source0:	https://cpan.metacpan.org/authors/id/L/LB/LBROCARD/WWW-Search-Google-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/L/LB/LBROCARD/WWW-Search-Google-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -32,7 +30,7 @@ This module reports errors via croak().
 This module uses Net::Google to do all the dirty work.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -53,9 +51,7 @@ make test
 %changelog
 * Tue Jul 28 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.230.0-1mdv2010.0
 + Revision: 401892
-- rebuild using %%perl_convert_version
-
-* Fri Aug 08 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.23-2mdv2009.0
+- rebuild using %0.23 Fri Aug 08 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.23-2mdv2009.0
 + Revision: 268880
 - rebuild early 2009.0 package (before pixel changes)
 
